@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #0B1220;
+  --color-navy-900: #111C2E;
+  --color-navy-800: #162338;
+  --color-navy-700: #1E293B;
+  --color-emerald-500: #10B981;
+  --color-emerald-400: #34D399;
+  --color-emerald-300: #6EE7B7;
+  --color-surface-light: #F8FAFC;
+  --color-text-light: #F1F5F9;
+  --color-text-muted: #94A3B8;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0B1220;
+  color: #F1F5F9;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.84) translateY(10px);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.03) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes progressFill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-logo-reveal {
+  animation: logoReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-progress-fill {
+  animation: progressFill 2.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
